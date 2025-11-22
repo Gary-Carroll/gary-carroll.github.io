@@ -103,7 +103,7 @@
 		I initially tried to simply extract the table using <i>tabula</i>'s <span class="function-code">read_pdf</span> function. On many pages the tables were
 		partially recognised, with the bottom part often ignored. I tried to specify the bounding area of each column in the <span class="function-code">read_pdf</span>
 		call, but this did not cause the full table to be reliably captured. Adjusting the stream and guess arguments didn't solve the problem.<br><br>
-		To force <i>tabula</i> to extract the full correct table from each page, I added used <i>pdfplumber</i> and <i>fitz</i> to first draw the column boundary boxes.
+		To force <i>tabula</i> to extract the full correct table from each page, I used <i>pdfplumber</i> and <i>fitz</i> to first draw the column boundary boxes.
 		The coordinates of the vertical parts of these boxes were determined by taking the coordinates of an entry in each column and the adjusting slightly to the
 		left of this position.<br><br>
 		<i>tabula</i> still did not correctly identify each table even with these column boundaries, so the next step was to add horizontal lines to differentiate the
