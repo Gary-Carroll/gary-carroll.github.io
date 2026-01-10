@@ -213,7 +213,12 @@ h2 {
 .center-text-skills {
     text-align: center;
     margin: 2rem auto 0;
-    width: 45%;
+    width: 60%;
+}
+
+.center-line {
+    display: block;
+    text-align: center;
 }
 
 .text-section {

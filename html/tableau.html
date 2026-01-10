@@ -103,6 +103,16 @@
     </figure>
 
 </div>
+<div class="center-text-skills">
+	<p>I created this <a class="accent-link" href="https://public.tableau.com/app/profile/gary.carroll8040/viz/IrelandCensusPopulation20112016/Dashboard1" target="_blank">Tableau dashboard</a>
+	to visualise the population changes of electoral divisions in Ireland between the 2011 and 2016 censuses. There are three different population metrics to choose from:
+	2011 numbers, 2016 numbers, and the difference between these two. There are also three different normalisation metrics to choose from: raw population numbers, 
+	population per square kilometre, and the ratio of men to women in each area. The actual differences between areas for all metrics are small, and the map colours
+	are therefore normalised to clearly show the relative differences between them. The normalisation formula used is based on the population metric selected. If the 
+	population metric is 'Δ Pop 2011-2016' then signed non-linear scaling is used. The actual Tableau formula is: <span class="center-line"><b>ATTR(SIGN([Population]) * POWER(LOG(1 + ABS([Population])), 0.4))</b></span>
+	<br>where the Population field here is the difference between the 2011 and 2016 values, set by the Population Metric parameter. This compresses large values so 
+	that extreme population changes do not dominate the visualisation. Simple logarithmic scaling is used for the other two population metric options.</p>
+</div>
 <br><br><br><br>
 <footer>
 <p class="center-align">
