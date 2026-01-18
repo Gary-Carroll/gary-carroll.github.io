@@ -336,6 +336,21 @@ main {
     text-align: left;
 }
 
+.bash-block {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    font-family: "Courier New", Courier, monospace;
+    overflow-x: auto;
+    display: inline-block;
+    margin: 0;
+    height: auto;
+    width: 60%;
+    text-align: left;
+}
+
 .line {
     display: flex;
     align-items: center;
@@ -347,6 +362,7 @@ main {
     padding: 0 5px;
     color: #ccc;
 }
+
 
 .code-block code {
     white-space: pre-wrap;

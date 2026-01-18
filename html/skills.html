@@ -80,11 +80,10 @@
         <li class="dropdown">
     <a href="#">Projects <span class="arrow">&#9662;</span></a>
     <ul class="dropdown-content">
-        <li><a href="chess.html">Chess</a></li>
-        <li><a href="countries.html">Countries</a></li>
+        <li><a href="chess.html">Lichess Analysis</a></li>
+        <li><a href="countries.html">Country Size Visualiser</a></li>
 		<li><a href="boi.html">Bank Statement Converter</a></li>
-		<li><a href="tableau.html">Tableau Dashboard</a></li>
-		<li><a href="tableau.html">Tableau Dashboard</a></li>
+		<li><a href="tableau.html">Population Map Tableau Dashboard</a></li>
     </ul>
 </li>
 
@@ -152,8 +151,18 @@
 
 				<br><br>
 				<h2 id="skillBash">Bash</h2><br>
-					<p>I use Linux on my personal computer and am comfortable using the command line for file and system operations.
-						I also have experience writing Bash scripts to automate tasks and solve problems as part a Big Data Programming module.</p>
+					<p>I use Linux on my personal computer and am comfortable using the command line for file and system operations. I first used 
+						Bash scripts to automate tasks and solve problems as part a Big Data Programming module. I now use bash scripts to automate 
+						and simplify certain process on my personal computer. One example of this is the following batch script that is triggered to run every time I 
+						open my budget spreadsheet via a macro in the spreadsheet. It obtains the current price of an index fund I am interested in, which is then 
+						automatically inserted into a particular cell of the spreadsheet.<br>
+<br>
+						 <pre class="bash-block"><code>#!/bin/bash
+curl -s -A "Mozilla/5.0" \
+  "https://query1.finance.yahoo.com/v8/finance/chart/VWCE.DE?range=5d&interval=1d" \
+  | grep -Po '"regularMarketPrice": *\K[0-9.]+' \
+  > ~/Documents/Money/price.txt
+</code></pre><br>
 				<br><br>
 
 				<h2 id="skillTableau">Tableau & Power BI</h2><br>
@@ -162,7 +171,10 @@
 					districts and stations across the country. When users select a division or district to drill down on, the map and other visuals are updated to
 					show the relevant information.<br>
 					I also make extensive use of Tableau Prep, creating flows to combine datasources, run data through machine learning models via embedded Python
-					or R scripts, and implement processing techniques such as sentiment analysis and text similarity analysis.<br>
+					or R scripts, and implement processing techniques such as sentiment analysis and text similarity analysis. I've made a public Tableau workbook 
+					containing interactive and filterable maps, available 
+					<a class="accent-link" href="https://public.tableau.com/app/profile/gary.carroll8040/viz/IrelandCensusPopulation20112016/Dashboard1" target="_blank">here</a> 
+					and described on this <a class="accent-link" href="tableau.html">page</a>.<br>
 					Although I do not use it in my job, I have completed courses in Power BI and can use it proficiently.
 				</p><br><br>
 
