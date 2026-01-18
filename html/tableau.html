@@ -106,13 +106,49 @@
 <div class="center-text-skills">
 	<p>I created this <a class="accent-link" href="https://public.tableau.com/app/profile/gary.carroll8040/viz/IrelandCensusPopulation20112016/Dashboard1" target="_blank">Tableau dashboard</a>
 	to visualise the population changes of electoral divisions in Ireland between the 2011 and 2016 censuses. There are three different population metrics to choose from:
-	2011 numbers, 2016 numbers, and the difference between these two. There are also three different normalisation metrics to choose from: raw population numbers, 
+	2011 numbers, 2016 numbers, and the difference between the two. There are also three different normalisation metrics to choose from: raw population numbers, 
 	population per square kilometre, and the ratio of men to women in each area. The actual differences between areas for all metrics are small, and the map colours
 	are therefore normalised to clearly show the relative differences between them. The normalisation formula used is based on the population metric selected. If the 
 	population metric is 'Δ Pop 2011-2016' then signed non-linear scaling is used. The actual Tableau formula is: <span class="center-line"><b>ATTR(SIGN([Population]) * POWER(LOG(1 + ABS([Population])), 0.4))</b></span>
 	<br>where the Population field here is the difference between the 2011 and 2016 values, set by the Population Metric parameter. This compresses large values so 
 	that extreme population changes do not dominate the visualisation. Simple logarithmic scaling is used for the other two population metric options.</p>
+	<p>The County filter allows you to select either all of Ireland or a specific country. Both maps and both tables will be updated to show data only for the selected
+		county. The following two images show exaples where different counties and population metrics are selected.
+	</p>
 </div>
+
+<div class="center-text">
+        <figure>
+        <img src="../images/tableau2.png" alt="Tableau Carlow" class="statement-img">
+    </figure>
+</div>
+
+<div class="center-text-skills">
+<p>It is no surprise that the most urban area of Carlow, Carlow Town, which is the small dark blue area in the upper left of the county has had the largest increase
+	 in population density in the county from 2011 to 2016. The decrease in density in Carlow's most rural areas is also clearly highlighed and unsurprising.<br>
+	 In the image below showing the population per square km of Mayo in 2016, the three urban areas of Castlebar, Ballina/Ardnaree and  Westport stand out clearly on
+	 the map. These are the three towns with the largest popualtion in Mayo by a significant margin, and this is reflected in the population density figures.
+</p></div>
+
+<div class="center-text">
+        <figure>
+        <img src="../images/tableau3.png" alt="Tableau M/F" class="statement-img">
+    </figure>
+</div>
+
+<div class="center-text-skills">
+<p>The below image shows the map of Ireland withn a different metric selected: the ratio of men to women in each electoral division and county. Every county has 
+	a ratio that is very close to 1. The county with the highest male to female ratio is Laois with 1.02, and the country with the lowest ratio is Dublin with 0.96 
+	which is the further value from 1 for any county. There is no clear trend when looking at the electoral divisions. Every county has a ratio that is very close to 1.
+	Hovering over individual electoral divisions or counties in the maps shows a tooltip with the name and actual numbers for that area.
+</p></div>
+
+<div class="center-text">
+        <figure>
+        <img src="../images/tableau4.png" alt="Tableau Mayo" class="statement-img">
+    </figure>
+</div>
+
 <br><br><br><br>
 <footer>
 <p class="center-align">
