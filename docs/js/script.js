@@ -424,7 +424,7 @@ let land1Value = null,  // Total land area of first selected country
 let geoData = null;     // GeoJSON data containing country boundary coordinates
 
 // Load country area data from JSON file
-fetch("../data/countries.json")
+fetch("data/countries.json")
   .then((r) => r.json())
   .then((d) => {
     countriesData = d; // Store the country data array
@@ -434,7 +434,7 @@ fetch("../data/countries.json")
   });
 
 // Load country boundary shapes from GeoJSON file
-fetch("../data/countries.geojson")
+fetch("data/countries.geojson")
   .then((r) => r.json())
   .then((d) => (geoData = d)); // Store GeoJSON feature collection
 
